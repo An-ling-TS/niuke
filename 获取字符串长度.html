@@ -1,0 +1,52 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: Liang Anqing
+ * @Date: 2020-07-21 15:01:55
+ * @LastEditors: Liang Anqing
+ * @LastEditTime: 2020-07-21 15:29:39
+--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    题目描述
+如果第二个参数 bUnicode255For1 === true，则所有字符长度为 1
+否则如果字符 Unicode 编码 > 255 则长度为 2
+示例1
+输入
+复制
+
+'hello world, 牛客', false
+
+输出
+复制
+
+17
+
+<script>
+    function strLength(s, bUnicode255For1) {
+        var res=0
+        if(bUnicode255For1)
+            return s.length
+        for(var i=0;i<s.length;i++){
+            console.log(s[i])
+            if(s.charCodeAt(i)>255)
+                res+=2
+            else
+                res+=1
+        }
+        console.log(s.length)
+        console.log(res)
+        return res
+    }
+    var test='hello world, 牛客';
+    var t1=false;
+    console.log(strLength(test,t1))
+</script>
+</body>
+</html>

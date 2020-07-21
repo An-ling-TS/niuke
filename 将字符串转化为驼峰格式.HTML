@@ -4,7 +4,7 @@
  * @Author: Liang Anqing
  * @Date: 2020-07-20 12:07:39
  * @LastEditors: Liang Anqing
- * @LastEditTime: 2020-07-20 12:10:50
+ * @LastEditTime: 2020-07-21 11:32:25
 --> 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +33,23 @@ fontSize
 </body>
 <script>
     function cssStyle2DomStyle(sName) {
-
-}
+        var res=''
+        for(var i in sName){
+            i=parseInt(i)
+            if(i>0 && sName[i-1]=='-' && i>1){
+                console.log(i)
+                res+=sName[i].toUpperCase();
+                continue;
+            }
+            if(sName[i]=='-'){
+                continue
+            }
+            res+=sName[i]
+        }
+        console.log(res)
+        return res
+    }
+    var test='-webkit-border-image'
+    cssStyle2DomStyle(test)
 </script>
 </html>

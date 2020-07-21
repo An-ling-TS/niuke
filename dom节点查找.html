@@ -1,0 +1,35 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: Liang Anqing
+ * @Date: 2020-07-21 15:33:25
+ * @LastEditors: Liang Anqing
+ * @LastEditTime: 2020-07-21 15:33:52
+--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    题目描述
+查找两个节点的最近的一个共同父节点，可以包括节点自身
+输入描述:
+
+oNode1 和 oNode2 在同一文档中，且不会为相同的节点
+
+
+    <script>
+        function commonParentNode(oNode1, oNode2) {
+            for(;oNode1;oNode1=oNode1.parentNode){
+                if(oNode1.contains(oNode2)){
+                    return oNode1;
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

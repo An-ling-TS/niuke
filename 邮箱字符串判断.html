@@ -1,0 +1,41 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: Liang Anqing
+ * @Date: 2020-07-21 13:23:51
+ * @LastEditors: Liang Anqing
+ * @LastEditTime: 2020-07-21 13:42:10
+--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    题目描述
+判断输入是否是正确的邮箱格式
+输入描述:
+
+邮箱字符串
+
+输出描述:
+
+true表示格式正确
+
+<script>
+    function isAvailableEmail(sEmail) {
+        //71%case通过
+        /*
+        var patt=/(\d+|\w+)@(\d+|\w+)\.com/;
+        return sEmail.match(patt)==null?false:sEmail.match(patt)[0]==sEmail
+        */
+        var patt=/^\w+@[a-zA-Z0-9]{2,10}(?:\.[a-z]{2,4}){1,3}$/;
+        return patt.test(sEmail)
+    }
+    var test='977638443@qq.com';
+    console.log(isAvailableEmail(test))
+</script>
+</body>
+</html>
