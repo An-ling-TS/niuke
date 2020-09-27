@@ -1,0 +1,33 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: Liang Anqing
+ * @Date: 2020-09-15 13:46:55
+ * @LastEditors: Liang Anqing
+ * @LastEditTime: 2020-09-15 13:52:57
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log('*******test1*******')
+        var person={
+            age:18,
+            getAge:function(){
+                console.log('1:'+this.age);
+                console.log('1this:'+this)
+                return this.age;
+            }
+        }
+        var getAge=person.getAge
+        console.log('2:'+getAge())
+        console.log('******test2******')
+        console.log('5' + 3, 5 + '3')
+    </script>
+</body>
+</html>
